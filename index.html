@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f5f7f2" />
-  <title>GreenLeaf â€” Expense Tracker</title>
+  <title>GreenLeaf — Expense Tracker</title>
 
   <style>
     :root {
@@ -808,7 +809,7 @@
   <div class="app">
     <header>
       <div class="brand">
-        <div class="brand-icon" aria-hidden="true">ðŸŒ¿</div>
+        <div class="brand-icon" aria-hidden="true">🌿</div>
         <div>
           <h1>GreenLeaf</h1>
           <p>Your money, in balance.</p>
@@ -830,7 +831,7 @@
 
     <main>
       <section class="welcome" id="homeSection">
-        <h2>Money overview ðŸ‘‹</h2>
+        <h2>Money overview 👋</h2>
         <p>Understand your spending and make every rupee count.</p>
       </section>
 
@@ -838,27 +839,27 @@
         <article class="summary-card balance">
           <div class="summary-top">
             <span class="summary-label">Net balance</span>
-            <span class="summary-icon">ðŸ’°</span>
+            <span class="summary-icon">💰</span>
           </div>
-          <div class="summary-amount" id="balanceAmount">â‚¹0</div>
+          <div class="summary-amount" id="balanceAmount">₹0</div>
           <p class="summary-note">Income minus expenses this month</p>
         </article>
 
         <article class="summary-card">
           <div class="summary-top">
             <span class="summary-label">Total income</span>
-            <span class="summary-icon">â†—ï¸</span>
+            <span class="summary-icon">↗️</span>
           </div>
-          <div class="summary-amount" id="incomeAmount">â‚¹0</div>
+          <div class="summary-amount" id="incomeAmount">₹0</div>
           <p class="summary-note">Money received this month</p>
         </article>
 
         <article class="summary-card expense">
           <div class="summary-top">
             <span class="summary-label">Total expenses</span>
-            <span class="summary-icon">â†˜ï¸</span>
+            <span class="summary-icon">↘️</span>
           </div>
-          <div class="summary-amount" id="expenseAmount">â‚¹0</div>
+          <div class="summary-amount" id="expenseAmount">₹0</div>
           <p class="summary-note">Money spent this month</p>
         </article>
       </section>
@@ -919,10 +920,10 @@
             </div>
             <div class="insight-content">
               <p>Total savings for the selected month</p>
-              <div class="insight-highlight" id="savingsRate">â‚¹0</div>
+              <div class="insight-highlight" id="savingsRate">₹0</div>
               <p id="insightText">Add transactions to see your monthly insight.</p>
               <button class="secondary-btn" id="exportBtn" type="button">
-                â†“ Export transactions as CSV
+                ↓ Export transactions as CSV
               </button>
               <button class="secondary-btn" id="clearBtn" type="button">
                 Clear all saved transactions
@@ -934,19 +935,19 @@
     </main>
 
     <footer class="footer">
-      GreenLeaf Finance Â· Simple money management
+      GreenLeaf Finance · Simple money management
     </footer>
   </div>
 
   <nav class="mobile-nav" aria-label="Mobile navigation">
     <button class="active" data-target="homeSection" type="button">
-      <span>âŒ‚</span>Home
+      <span>⌂</span>Home
     </button>
     <button data-target="transactionsSection" type="button">
-      <span>â†”</span>Transactions
+      <span>↔</span>Transactions
     </button>
     <button data-target="insightsSection" type="button">
-      <span>â—·</span>Insights
+      <span>◷</span>Insights
     </button>
   </nav>
 
@@ -966,13 +967,13 @@
           id="closeModalBtn"
           type="button"
           aria-label="Close form"
-        >Ã—</button>
+        >×</button>
       </div>
 
       <form id="transactionForm">
         <div class="type-switch">
           <button class="type-btn active" id="expenseTypeBtn" type="button">
-            âˆ’ Expense
+            − Expense
           </button>
           <button class="type-btn" id="incomeTypeBtn" type="button">
             + Income
@@ -991,7 +992,7 @@
         </div>
 
         <div class="form-field">
-          <label for="amountInput">Amount (â‚¹)</label>
+          <label for="amountInput">Amount (₹)</label>
           <input
             id="amountInput"
             type="number"
@@ -1053,22 +1054,22 @@
     ];
 
     const CATEGORY_ICONS = {
-      "Food & Dining": "ðŸ½ï¸",
-      "Groceries": "ðŸ›’",
-      "Transport": "ðŸš—",
-      "Shopping": "ðŸ›ï¸",
-      "Bills & Utilities": "ðŸ§¾",
-      "Health": "ðŸ’Š",
-      "Entertainment": "ðŸŽ¬",
-      "Education": "ðŸ“š",
-      "Rent": "ðŸ ",
-      "Travel": "âœˆï¸",
-      "Other": "ðŸ“Œ",
-      "Salary": "ðŸ’¼",
-      "Freelance": "ðŸ’»",
-      "Business": "ðŸª",
-      "Investment": "ðŸ“ˆ",
-      "Gift": "ðŸŽ"
+      "Food & Dining": "🍽️",
+      "Groceries": "🛒",
+      "Transport": "🚗",
+      "Shopping": "🛍️",
+      "Bills & Utilities": "🧾",
+      "Health": "💊",
+      "Entertainment": "🎬",
+      "Education": "📚",
+      "Rent": "🏠",
+      "Travel": "✈️",
+      "Other": "📌",
+      "Salary": "💼",
+      "Freelance": "💻",
+      "Business": "🏪",
+      "Investment": "📈",
+      "Gift": "🎁"
     };
 
     const $ = (id) => document.getElementById(id);
@@ -1345,7 +1346,7 @@
       if (filtered.length === 0) {
         $("transactionList").innerHTML = `
           <div class="empty-state">
-            <div class="empty-icon">ðŸŒ±</div>
+            <div class="empty-icon">🌱</div>
             <h4>No transactions found</h4>
             <p>Try another search or add a transaction<br />to get started.</p>
           </div>
@@ -1354,8 +1355,8 @@
       }
 
       $("transactionList").innerHTML = filtered.map((item) => {
-        const icon = CATEGORY_ICONS[item.category] || "ðŸ“Œ";
-        const sign = item.type === "income" ? "+" : "âˆ’";
+        const icon = CATEGORY_ICONS[item.category] || "📌";
+        const sign = item.type === "income" ? "+" : "−";
         const amountClass = item.type === "income" ? "income" : "expense";
 
         return `
@@ -1365,7 +1366,7 @@
             <div class="transaction-info">
               <div class="transaction-title">${escapeHTML(item.title)}</div>
               <div class="transaction-meta">
-                ${escapeHTML(item.category)} Â· ${escapeHTML(formatDate(item.date))}
+                ${escapeHTML(item.category)} · ${escapeHTML(formatDate(item.date))}
               </div>
             </div>
 
@@ -1418,7 +1419,7 @@
       if (entries.length === 0) {
         $("categoryBreakdown").innerHTML = `
           <div class="empty-state">
-            <div class="empty-icon">ðŸ“Š</div>
+            <div class="empty-icon">📊</div>
             <h4>Nothing to break down</h4>
             <p>Your expense categories will appear here.</p>
           </div>
@@ -1435,7 +1436,7 @@
           <div class="category-item">
             <div class="category-line">
               <span class="category-name">
-                ${CATEGORY_ICONS[category] || "ðŸ“Œ"} ${escapeHTML(category)}
+                ${CATEGORY_ICONS[category] || "📌"} ${escapeHTML(category)}
               </span>
               <span class="category-value">${formatCurrency(amount)}</span>
             </div>
